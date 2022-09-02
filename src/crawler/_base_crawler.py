@@ -114,7 +114,8 @@ class BaseCrawler:
 
     def to_db(self, conn, dao, cve):
         cnvd_url = 'https://www.cnvd.org.cn/flaw/show/'
-        crawl_url = os.environ["CRAWL_URL"]
+        # crawl_url = os.environ["CRAWL_URL"]
+        crawl_url = 'https://www.cnvd.org.cn/'
         tcve = TCves()
         tcve.md5 = cve.MD5()
         tcve.src = cve.src

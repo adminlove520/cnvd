@@ -35,7 +35,8 @@ class CVEInfo:
 
     def to_html(self):
         cnvd_url = 'https://www.cnvd.org.cn/flaw/show/'
-        crawl_url = os.environ["CRAWL_URL"]
+        # crawl_url = 'https://www.cnvd.org.cn/'
+        crawl_url = 'https://www.cnvd.org.cn/'
         return '<br/>'.join([
             "<br/>==============================================",
             "[<b>漏洞来源</b>] %s" % self.src,
@@ -48,7 +49,7 @@ class CVEInfo:
 
     def to_msg(self):
         cnvd_url = 'https://www.cnvd.org.cn/flaw/show/'
-        crawl_url = os.environ["CRAWL_URL"]
+        crawl_url = 'https://www.cnvd.org.cn/'
         return '\n'.join([
             "\n==============================================",
             "[ TITLE ] %s" % self.title,
@@ -65,7 +66,7 @@ class CVEInfo:
 
     def __repr__(self):
         cnvd_url = 'https://www.cnvd.org.cn/flaw/show/'
-        crawl_url = os.environ["CRAWL_URL"]
+        crawl_url = 'https://www.cnvd.org.cn/'
         return '\n'.join([
             "\n==============================================",
             "[ TITLE ] %s" % self.title,
